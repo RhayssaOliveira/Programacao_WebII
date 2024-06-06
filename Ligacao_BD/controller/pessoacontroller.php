@@ -1,5 +1,5 @@
 <?php
-    require_once '../model/pessoa.php';
+    require_once $_SERVER['DOCUMENT_ROOT'].'ligacao_bd/model/pessoa.php';
 
     //definindo a classe que vai receber os dados
     class PessoaController{
