@@ -41,6 +41,7 @@
                 <label for="celular">Celular:</label>
                 <input type="text" class="form-control" id="celular" placeholder="Insira o celular">
             </div>
+            <!--botao para enviar os dados ao bd-->
             <button type="submit" class="btn btn-primary">Cadastrar</button>
         </form>
     </div>

@@ -25,16 +25,17 @@
                     ['Manuella', '000000003', '000000000']
                 ];
 
+                //exibindo os registros em uma tabela
                 foreach ($registros as $registro) {
-                    echo '<tr>';
-                    echo '<td>' . $registro[0] . '</td>';
-                    echo '<td>' . $registro[1] . '</td>';
-                    echo '<td>' . $registro[2] . '</td>';
-                    echo '<td>';
-                    echo '<button class="btn btn-primary">Editar</button>';
-                    echo '<button class="btn btn-danger">Excluir</button>';
-                    echo '</td>';
-                    echo '</tr>';
+                    echo '<tr>'; //incio tabela
+                    echo '<td>' . $registro[0] . '</td>'; //exibe o valor 1
+                    echo '<td>' . $registro[1] . '</td>'; //exibe o valor 2
+                    echo '<td>' . $registro[2] . '</td>';//exibe o valor 3
+                    echo '<td>'; //iniciando a criacao dos botoes
+                    echo '<button class="btn btn-primary">Editar</button>';//botao para editar
+                    echo '<button class="btn btn-danger">Excluir</button>';//botao para excluir
+                    echo '</td>'; //fechando a criacao dos botoes
+                    echo '</tr>'; //final tabela
                 }
                 ?>
             </tbody>

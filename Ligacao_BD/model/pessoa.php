@@ -1,4 +1,5 @@
 <?php
+    //incluindo o arquivo em 'conexao.php'
     require_once '../controller/conexao.php';
 
     class Pessoa{
@@ -12,9 +13,9 @@
         private $estado;
         private $telefone;
         private $celular;
-        private $conexao; //var que guarda os dados
+        private $conexao; //objeto de conexao com o bd
 
-        //colhendo valores
+        //colhendo valores por meio de 'guetters' e 'setters'
         public function getId(){
             return $this->id;
         }
@@ -78,10 +79,14 @@
 
         //metodo para inserir o que o user inseriu no bd
         public function inserir(){
+            //preparando a consulta sql
             $sql = "INSERT INTO cliente (`nome`, `endereco`, `bairro`, `cep`, `cidade`, `estado`, `telefone`, `celular`) VALUES (?,?,?,?,?,?,?,?)";
+            //declarando sql
             $stmt = $this->conexao->getConexao()->prepare($sql);
+            //ligando os parametros aos valores das variaveis
             $stmt->bind_param('ssssssss', $this->nome, $this->endereco, $this->bairro, $this->cep, $this->cidade, $this->estado, $this->telefone, $this->celular);
-            return $stmt->execute();
+            //consultando sql e retornando o resultado
+            return $stmt->execute(); 
         }
     }
 

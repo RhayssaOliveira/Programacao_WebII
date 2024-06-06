@@ -8,7 +8,7 @@
     <div>&nbsp;</div>
     <div class="container">
         <h2>Cadastro</h2>
-        <!--recebendo os valores e ligando ao bd-->
+        <!--recebendo os valores e mandando ao bd-->
         <form method = "POST" action="controller/PessoaController.php">
             <div class="form-group">
                 <label for="nome">Nome:</label>
@@ -42,6 +42,7 @@
                 <label for="celular">Celular:</label>
                 <input type="text" class="form-control" id="celular" name="celular" placeholder="Insira o celular:">
             </div>
+            <!--botao para enviar os dados para o bd-->
             <button type="submit" class="btn btn-primary">Cadastrar</button>
         </form>
     </div>
